@@ -8,7 +8,7 @@ void init_logic_analyzer()
     // Attach the interupt routine
     for (pin_size_t i = START_DBUS_PIN; i <= END_DBUS_PIN; ++i)
     {
-        pinMode(i, INPUT_PULLUP);
+        pinMode(i, INPUT);
     }
     Serial.begin(LOGIC_ANALYZER_BAUD_RATE);
     attachInterrupt(digitalPinToInterrupt(D1), interupt_routine, CHANGE);
